@@ -101,6 +101,13 @@ button{
     justify-self: left;
 }
 
+@media (max-width: 770px) {
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .content{
     display:flex;
     flex-direction:column;
@@ -140,20 +147,21 @@ button{
     margin-top: 50px;
 }
 
-/*@media (max-width: 1050px) {*/
-/*    .top-content {*/
-/*        flex-direction: column;*/
-/*        align-items: center;*/
-/*    }*/
-/*    .top-content__info{*/
-/*        display: flex;*/
-/*        text-align: center;*/
-/*        flex-direction: column;*/
-/*    }*/
-/*    .top-content__notebook{*/
-/*        margin: 0;*/
-/*    }*/
-/*}*/
+@media (max-width: 1050px) {
+    .top-content .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-content__info{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .top-content__notebook{
+        margin: 0;
+    }
+}
 
 .about{
     display: flex;
@@ -193,7 +201,8 @@ button{
 }
 
 .projects__project-list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 140px);
     justify-content: space-around;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -266,6 +275,12 @@ button{
     width:555px
 }
 
+@media (max-width: 1190px) {
+    .skills .container{
+        flex-direction: column;
+    }
+}
+
 .job{
     display: flex;
     justify-content: center;
@@ -294,7 +309,7 @@ button{
 .job__fake-video-container{
     display: flex;
     justify-content: center;
-    width: 1110px;
+    width: 1150px;
     height: 600px;
     background-image: url('../img/fake-video.png');
     background-size: cover;
@@ -304,6 +319,14 @@ button{
 
 .job__fake-video-button{
     align-self: center;
+}
+
+@media (max-width: 1150px) {
+    .job__fake-video-container{
+        width: 575px;
+        height: 300px;
+        overflow: hidden;
+    }
 }
 
 .gallery{
@@ -428,4 +451,10 @@ button{
 
 .footer__social-item{
     margin-right: 20px;
+}
+
+@media (max-width: 1250px) {
+    .footer .container {
+        justify-content: space-around;
+    }
 }
